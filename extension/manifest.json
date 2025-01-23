@@ -1,20 +1,19 @@
 {
-    "manifest_version": 3,
-    "name": "Recommandations Éthiques",
-    "version": "1.0",
-    "description": "Propose des alternatives éthiques pour les produits Amazon.",
-    "permissions": [
-        "activeTab",
-        "scripting",
-        "notifications"
-    ],
-
-    "background": {
-      "service_worker": "background.js"
-    },
-    "action": {
-      "default_popup": "popup.html",
-      "default_icon": "icon.png"
-    }
+  "manifest_version": 3,
+  "name": "Recommandations Éthiques",
+  "version": "1.0",
+  "description": "Propose des alternatives éthiques pour les produits Amazon.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "notifications",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
   }
-  
+}

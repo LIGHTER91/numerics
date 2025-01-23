@@ -13,7 +13,7 @@ def recommend():
     recommendations_df=get_recomandation(genres)
 
     recommendations = [
-        {"title": row['title'], "link": f"https://www.imdb.com/title/"} 
+        {"title": row['title'], "link": f"https://www.google.com/search?q={row['title']}"} 
         for _, row in recommendations_df.iterrows()
     ]
     print(jsonify({"recommendations":recommendations }))
@@ -26,7 +26,7 @@ def categorie():
     recommendations_df=get_recomandation(genre)
 
     recommendations = [
-        {"title": row['title'], "link": f"https://www.imdb.com/title/"} 
+        {"title": row['title'], "link": f"https://www.google.com/search?q={row['title']}"} 
         for _, row in recommendations_df.iterrows()
     ]
     print(recommendations)
