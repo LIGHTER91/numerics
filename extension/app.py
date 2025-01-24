@@ -9,7 +9,7 @@ CORS(app)
 def recommend():
     recommendation = request.get_json()['username']
     genres=get_profil_moovie(recommendation)
-    
+    print (genres)
     recommendations_df=get_recomandation(genres)
 
     recommendations = [

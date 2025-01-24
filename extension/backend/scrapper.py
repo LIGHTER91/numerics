@@ -14,7 +14,7 @@ def search_movie_by_name(movie_name):
     params = {
         "api_key": API_KEY,
         "query": movie_name,
-        "language": "fr-FR"  # Français
+        "language": "en-US"  
     }
     response = requests.get(url, params=params)
     if response.status_code == 200:
@@ -33,7 +33,7 @@ def get_genres_map():
     Retourne un dictionnaire {id_genre: nom_genre}.
     """
     url = f"{BASE_URL}/genre/movie/list"
-    params = {"api_key": API_KEY, "language": "fr-FR"}
+    params = {"api_key": API_KEY, "language": "en-US"}
     response = requests.get(url, params=params)
     if response.status_code == 200:
         genres = response.json()["genres"]
@@ -93,10 +93,11 @@ def get_profil_moovie(username):
                 rating = movie.get("vote_average", "Note inconnue")
                 genre_ids = movie.get("genre_ids", [])
                 genres = [genres_map[g_id] for g_id in genre_ids if g_id in genres_map]
+                
                 if isinstance(rating, str):
                     continue
                 rating = int(rating)
-                if(rating>5):
+                if(rating>=5):
                     genres_movies.append(genres)
         return transform_genres(genres_list=genres_movies)
 
