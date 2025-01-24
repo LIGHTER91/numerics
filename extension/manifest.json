@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Recommandations Éthiques",
+  "name": "Recommandations Cinéma",
   "version": "1.0",
-  "description": "Propose des alternatives éthiques pour les produits Amazon.",
+  "description": "Propose des recommandations de film en fonction des catégories ou d'un compte TMBD avec des avis publique.",
   "permissions": [
     "activeTab",
     "scripting",
