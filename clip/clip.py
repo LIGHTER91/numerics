@@ -249,9 +249,9 @@ def main():
     pd.set_option('display.max_colwidth', None)
 
     # Load the dataset
-    movies_path = './data/movies.csv'
-    ratings_path = './data/ratings.csv'
-    links_path = './data/tags.csv'
+    movies_path = '../data/movies.csv'
+    ratings_path = '../data/ratings.csv'
+    links_path = '../data/tags.csv'
 
     movies_df, ratings_df = load_movies_dataset(movies_path, ratings_path, links_path)
 
@@ -284,7 +284,7 @@ def main():
         print("User embeddings saved.")
 
     # User ID for recommendation
-    user_id = 1# 506
+    user_id = 506
     liked_movies = get_user_liked_movies(user_id, ratings_df, movies_df)
     liked_movies = liked_movies.sort_values('rating', ascending=False)
     print(f"Movies liked by user {user_id}:")

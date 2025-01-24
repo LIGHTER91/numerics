@@ -113,8 +113,8 @@ def get_recomandation(genres):
     pd.set_option('display.max_colwidth', None)
 
     # Load the dataset
-    movies_path = './data/movies.csv'
-    links_path = './data/tags.csv'
+    movies_path = '../data/movies.csv'
+    links_path = '../data/tags.csv'
 
     movies_df = load_movies_dataset_with_genres(movies_path, links_path)
 
