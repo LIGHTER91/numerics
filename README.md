@@ -53,7 +53,7 @@ python app.py
 2. Aller sur `chrome://extensions/`
 3. Activer le "Mode développeur" (bouton en haut à droite)
 4. Cliquer sur "Charger l'extension non empaquetée"
-5. Sélectionner le répertoire de l'extension Chrome
+5. Sélectionner le répertoire de l'extension Chrome "extension"
 
 ## Configuration
 - S'assurer que `app.py` est en cours d'exécution avant d'utiliser l'extension
